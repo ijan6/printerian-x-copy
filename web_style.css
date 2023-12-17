@@ -1,0 +1,11 @@
+body{
+    background-image: url(Images/index.jpg);
+    background-size: cover;
+}
+ .centered  {
+    text-align: center;
+} 
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}

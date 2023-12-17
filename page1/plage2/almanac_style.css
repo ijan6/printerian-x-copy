@@ -1,0 +1,45 @@
+.slider-container{
+    width: 500px;
+    margin: 0 auto;
+}
+ .centered {
+text-align: center;
+display: block;
+margin: 50;
+} 
+.slider-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+}
+.prev { left: 0; }
+.next { right: 0; }
+table{
+margin: 0 auto;
+}
+body{
+background-image: url(../Images/almanac-bg.jpg);
+background-size: cover;
+margin: 0;
+padding: 0;
+overflow: 0;
+}

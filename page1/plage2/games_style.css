@@ -1,0 +1,34 @@
+ /* This is the CSS section, where we style the HTML elements */
+ body {
+    /* Set the background color to light blue */
+    background-color: lightblue;
+}
+#ball {
+    /* Set the width and height of the ball to 100 pixels */
+    width: 100px;
+    height: 100px;
+    /* Set the border radius to 50% to make the ball round */
+    border-radius: 50%;
+    /* Set the background color to blue
+     */
+    background-color: blue;
+    /* Set the position to absolute, so we can move the ball around */
+    position: absolute;
+    /* Set the top and left properties to 50%, so the ball is centered */
+    top: 50%;
+    left: 50%;
+    /* Set the transform property to translate the ball by -50% of its width and height, so it is centered */
+    transform: translate(-50%, -50%);
+}
+#score {
+    /* Set the font size to 32 pixels */
+    font-size: 32px;
+    /* Set the text align to center */
+    text-align: center;
+}
+#timer {
+    /* Set the font size to 32 pixels */
+    font-size: 32px;
+    /* Set the text align to center */
+    text-align: center;
+}

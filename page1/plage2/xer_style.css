@@ -1,0 +1,31 @@
+h1{
+    font-style: italic;
+    font-weight: bold;
+    color: silver;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    overflow: 0;
+}
+.centered {
+    text-align: center;
+} 
+table {
+    border-collapse: collapse;
+    width: 0; 
+    margin: 0 auto;   
+}
+th, td, tr {
+    border: 0;
+    padding:0;
+    text-align: center;
+}
+.blk {
+    color: gray;
+    background-color: aqua;
+}
+.clrd{
+    color: red;
+    background-color: blue;
+}

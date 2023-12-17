@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="games_style.css">
+<body>
+    <a href="option.html"><button>Back</button></a>
+    <!-- This is the HTML section, where we create the HTML elements -->
+    <!-- Create a div element with the id of ball -->
+    <div id="ball"></div>
+    <!-- Create a p element with the id of score -->
+    <p id="score">Score: 0</p>
+    <!-- Create a p element with the id of timer -->
+    <p id="timer">Time: 10</p>
+    <!-- This is the JavaScript section, where we add the logic and functionality of the game -->
+    <script>
+        // Get the ball element by its id
+        var ball = document.getElementById("ball");
+        // Get the score element by its id
+        var score = document.getElementById("score");
+        // Get the timer element by its id
+        var timer = document.getElementById("timer");
+        // Declare a variable to store the score
+        var scoreValue = 0;
+        // Declare a variable to store the time
+        var timeValue = 10;
+        // Declare a variable to store the interval id
+        var intervalId;
+        // Add a click event listener to the ball element
+        ball.addEventListener("click", function() {
+            // Increase the score by 1
+            scoreValue++;
+            // Update the score element with the new score
+            score.innerHTML = "Score: " + scoreValue;
+            // Move the ball to a random position
+            moveBall();
+        });
+        // Define a function to move the ball to a random position
+        function moveBall() {
+            // Generate a random number between 0 and 90 for the top position
+            var top = Math.floor(Math.random() * 91);
+            // Generate a random number between 0 and 90 for the left position
+            var left = Math.floor(Math.random() * 91);
+            // Set the top and left properties of the ball element to the random numbers
+            ball.style.top = top + "%";
+            ball.style.left = left + "%";
+        }
+        // Define a function to start the game
+        function startGame() {
+            // Set the interval id to a function that runs every second
+            intervalId = setInterval(function() {
+                // Decrease the time by 1
+                timeValue--;
+                // Update the timer element with the new time
+                timer.innerHTML = "Time: " + timeValue;
+                // Check if the time is zero
+                if (timeValue == 0) {
+                    // Stop the interval
+                    clearInterval(intervalId);
+                    // Alert the final score
+                    alert("Game over! Your score is " + scoreValue);
+                }
+            }, 1000); // 1000 milliseconds = 1 second
+        }
+        // Call the startGame function when the page loads
+        startGame();
+        
+    </script>
+</body>
+</html>

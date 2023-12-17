@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+<link rel="stylesheet" href="almanac_style.css">
+</head>
+<body id="backg-document">
+    <br>
+        <div class="centered">
+            <a href="option.html"><button>Back</button></a>
+            <h1><i style="font-family: fantasy;">"PRINTERIAN X-COPY"</i></h1>
+            <h3><b>ALMANAC</b></h3>
+            <h2>Paper Sizes</h2>
+<table> 
+    <tr>   
+        <th>     
+                <div > 
+                    <div class="slider-container" > 
+                        <div class="slide">
+                            <img src="../../Images/formaxprintingcom_713736716.png" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="../../Images/A-Series.png" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="../../Images/sizes of paper.jpg" alt="Image 3"> <br>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="btn prev">&#10094;</div>
+                    <div class="btn next">&#10095;</div>
+                </div>
+            </div> 
+        </th>   
+    </tr>
+</table>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[n].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+
+        showSlide(currentSlide);
+    </script>
+    
+</body>
+</html>
